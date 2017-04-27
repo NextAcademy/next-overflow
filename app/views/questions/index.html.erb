@@ -1,9 +1,27 @@
 <h2> Welcome to Next Overflow </h2>
 
 <h4> Ask a question </h4>
+
+<%#= link_to "Ask a question", "#question-modal", 'data-toggle': 'modal' %>
+
+<%#= erb :"questions/question_modal", layout: false %>
+
+
 <%= form_for @question do |form| %>
 	<%= render partial: '/questions/form', object: form %>
 	<div>
 		<%= form.submit %>
+	</div>
+<% end %>
+
+<br>
+<br>
+
+<% @questions.each do |x| %>
+	<div>
+		<%= x.title %>
+	</div>
+	<div>
+		<%= x.content %>
 	</div>
 <% end %>

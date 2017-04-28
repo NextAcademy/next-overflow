@@ -24,6 +24,7 @@ gem 'coffee-rails', '~> 4.2'
 # 
 gem "twitter-bootstrap-rails"
 
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -46,6 +47,7 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do

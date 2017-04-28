@@ -2,7 +2,18 @@
 
 <h4> Ask a question </h4>
 
-<%= link_to "Ask a question", "#question-modal", 'data-toggle': 'modal', class: 'btn pmd-ripple-effect btn-primary pmd-z-depth'%>
+<div class="row">
+	<div class="col-md-4">	
+		<div class="form-inline">
+			<div class="form-group">
+				<%= text_field_tag :search, params[:search], placeholder: "Search Questions", class: 'form-control'%>
+				<%= link_to "Ask a question", "#question-modal", 'data-toggle': 'modal', class: 'btn pmd-ripple-effect btn-primary pmd-z-depth', id: '#askaquestion' %>
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 	<%= render partial: "questions/question_modal", layout: false %>
 

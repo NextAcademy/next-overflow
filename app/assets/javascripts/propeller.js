@@ -507,6 +507,8 @@ $(document).ready(function () {
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
+
+
 $(document).ready(function () {
 
 	$('.popover-html[data-toggle="popover"]').popover({

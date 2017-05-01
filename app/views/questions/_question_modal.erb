@@ -1,0 +1,26 @@
+<div tabindex="-1" class="modal fade" id="question-modal" style="display: none;" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header pmd-modal-bordered">
+        <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+        <h2 class="pmd-card-title-text">Post a Question</h2>
+      </div>
+      <div class="modal-body">
+        <%= form_for @question, html: {class: 'form-horizontal'} do |form| %>
+          <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <%= form.label :title, class: 'control-label' %>
+            <%= form.text_field :title, type: 'text', class: 'form-control mat-input' %>
+            <span class="help-text">Input is required!</span> 
+          </div>
+          <div class="form-group pmd-textfield pmd-textfield-floating-label">
+            <%= form.label :content, class: 'control-label' %>
+            <%= form.text_area :content, type: 'text', class: 'form-control mat-input' %>
+          </div>
+          <div class="pmd-modal-action">
+            <%= form.submit 'Ask Question', class: 'btn pmd-ripple-effect btn-primary' %> 
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

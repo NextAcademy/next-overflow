@@ -1,11 +1,13 @@
 
 
 $(document).ready(function () {
-	console.log("hi");
-	var title = document.querySelector('#search') ;
+
 	$('#askaquestion').click(function(){
-		console.log("hi");
-		var div = document.getElementById('question_title')
-		div.innerHTML = div.innerHTML + 'Extra stuff';
+		var title = document.getElementById('search').value;
+		var question = document.getElementById('question_title');
+		var question = $("#question_title");
+		question.parent().addClass("pmd-textfield-floating-label-active");
+		question.parent().addClass("pmd-textfield-floating-label-completed");
+		question.val(question.val() + title);
 	});
 });

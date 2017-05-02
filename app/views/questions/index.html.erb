@@ -31,11 +31,12 @@
 <br>
 
 
-<% @questions.each do |x| %>
-	<div>
+<% @question.each do |x| %>
 		<%= x.title %>
-	</div>
-	<div>
+
 		<%= x.content %>
-	</div>
+
+		<% if current_user.mentor? %>
+			<%= x.user.name %>
+		<% end %>
 <% end %>

@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
 	def index
+		byebug
 		@question = Question.new
 		@questions = Question.all 
 	end

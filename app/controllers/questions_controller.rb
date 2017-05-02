@@ -1,8 +1,12 @@
 class QuestionsController < ApplicationController
-	
+
 	def index
-		@question = Question.new
-		@questions = Question.all
+		if current_user
+			@question = Question.new
+			@questions = Question.all
+		else
+			redirect_to "clearance/sessions#new"
+		end
 	end
 
 	def create

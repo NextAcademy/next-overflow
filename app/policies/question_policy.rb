@@ -19,4 +19,5 @@ class QuestionPolicy < ApplicationPolicy
   def create
   	user.student? 
   end
+
 end

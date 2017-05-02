@@ -37,4 +37,5 @@ ActiveRecord::Schema.define(version: 20170502031536) do
     t.index ["remember_token"], name: "index_users_on_remember_token", using: :btree
   end
 
+  add_foreign_key "questions", "users"
 end

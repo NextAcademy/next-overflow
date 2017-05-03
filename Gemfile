@@ -28,6 +28,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem "twitter-bootstrap-rails"
 gem "clearance"
 gem "pundit"
+gem 'activeadmin'
 
 
 # Use jquery as the JavaScript library

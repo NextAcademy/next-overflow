@@ -22,17 +22,4 @@ RSpec.describe QuestionsController, type: :controller do
 			expect(response.body).to include("Widget was successfully created.")
 		end
 	end
-
-	# context "POST create" do
-	# 	 it "raises an error if missing params title" do
-	# 	 	assign :question, Question.new(content: "Hi!")
- #      # params = { subscription: { start_on: "2015-09-28" } }
-
- #      render 
-
- #      expect do
- #        post :create, params
- #      end.to raise_error ActiveRecord::RecordInvalid
- #    end
-	# end
 end

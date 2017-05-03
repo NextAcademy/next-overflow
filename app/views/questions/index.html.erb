@@ -32,10 +32,11 @@
 
 
 <% @questions.each do |x| %>
-	<div>
 		<%= x.title %>
-	</div>
-	<div>
+
 		<%= x.content %>
-	</div>
+
+		<% if current_user.mentor? %>
+			<%= x.user.name %>
+		<% end %>
 <% end %>

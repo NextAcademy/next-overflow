@@ -26,6 +26,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 # gem 'therubyracer', platforms: :ruby
 # 
 gem "twitter-bootstrap-rails"
+gem "clearance"
+gem "pundit"
 
 
 # Use jquery as the JavaScript library

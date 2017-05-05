@@ -1,5 +1,3 @@
-<h2> Welcome to Next Overflow </h2>
-
 <h4> Ask a question </h4>
 
 <div class="row">
@@ -32,11 +30,16 @@
 
 
 <% @questions.each do |x| %>
-		<%= x.title %>
+		<%= link_to (x.title), question_path(x) %>
 
 		<%= x.content %>
 
-		<% unless current_user.student? %>
-			<%= x.user.name %>
+		<% if current_user.student? %>
+			<p> Posted by Anonymous </p>
+		<% else %>
+			<p> Posted by <%= x.user.name %> </p>
 		<% end %>
+		
+
+		<br>
 <% end %>

@@ -1,0 +1,17 @@
+<%= @question.title %>
+<%= @question.content %>
+
+<br>
+
+<% if current_user.student? %>
+	<p> Posted by Anonymous </p>
+<% else %>
+	<p> Posted by <%= @question.user.name %> </p>
+<% end %>
+
+<% if current_user.mentor? %>
+	<%= form_for @answer do |form| %>
+		<%= render partial: '/answers/form', object: form %>
+		<%= form.submit 'Answer' %>
+	<% end %>
+<% end %>			

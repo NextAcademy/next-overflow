@@ -9,6 +9,11 @@ class QuestionsController < ApplicationController
 		end
 	end
 
+	def show
+		@question = Question.find(params[:id])
+		@answer = Answer.new
+	end
+
 	def create
 		@question = current_user.questions.new(question_params)
 		authorize @question

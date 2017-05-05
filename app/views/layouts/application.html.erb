@@ -16,7 +16,7 @@
 
   <body>
     <div class="container-fluid">
-      <h2>Next Overflow </h2>
+      <h2><%= link_to ('Next Overflow'), root_path %> </h2>
       <div id="header">
         <% if signed_in? %>
           <%= button_to 'Sign out', sign_out_path, method: :delete %>

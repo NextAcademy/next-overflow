@@ -16,7 +16,7 @@ class QuestionPolicy < ApplicationPolicy
     @question = question
   end
 
-  def create
+  def create?
   	user.student? 
   end
 

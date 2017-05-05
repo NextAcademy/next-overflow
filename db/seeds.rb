@@ -8,8 +8,8 @@
 
 
 
-ActiveRecord::Base.transaction do
-	User.create([ {name: 'Student'}, {email: 'student@gmail.com'}, {password: '123'} ])
-	User.create([ {name: 'Mentor'}, {email: 'mentor@gmail.com'}, {password: '123'}, {role: 'mentor'} ])
-	User.create([ {name: 'Superadmin'}, {email: 'superadmin@gmail.com'}, {password: '123'}, {role: 'superadmin'} ])
-end
+# ActiveRecord::Base.transaction do
+	User.create!(name: 'Student', email: 'student@gmail.com', password: '123')
+	User.create!(name: 'Mentor', email: 'mentor@gmail.com', password: '123', role: 1)
+	User.create!(name: 'Superadmin', email: 'superadmin@gmail.com', password: '123', role: 2)
+# end

@@ -5,7 +5,7 @@ class QuestionsController < ApplicationController
 			@question = Question.new
 			@questions = Question.all
 		else
-			redirect_to "clearance/sessions#new"
+			redirect_to sign_in_path
 		end
 	end
 

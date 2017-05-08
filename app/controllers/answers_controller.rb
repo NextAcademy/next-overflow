@@ -1,6 +1,5 @@
 class AnswersController < ApplicationController
 	def create
-		byebug
 		@answer = current_user.answers.new(answer_params)
 		if @answer.save
 			flash[:success] = "Your answer was successfully created"

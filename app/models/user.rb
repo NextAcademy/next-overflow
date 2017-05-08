@@ -3,7 +3,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
 
-  
+  has_many :answers
   has_many :questions
 
   enum role: [:student, :mentor, :superadmin]

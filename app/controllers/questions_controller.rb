@@ -11,7 +11,13 @@ class QuestionsController < ApplicationController
 
 	def show
 		@question = Question.find(params[:id])
-		@answer = Answer.new
+		byebug
+		@answer = 
+			if @question.answer != nil
+				@question.answer
+			else
+				Answer.new
+			end
 	end
 
 	def create

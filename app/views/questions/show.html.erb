@@ -14,6 +14,7 @@
 
 <% if current_user.mentor? %>
 	<%= form_for @answer do |form| %>
+		 <%= hidden_field_tag 'question_id', @question.id %>
 		<%= render partial: '/answers/form', object: form %>
 		<%= form.submit 'Answer' %>
 	<% end %>

@@ -11,7 +11,6 @@ class QuestionsController < ApplicationController
 
 	def show
 		@question = Question.find(params[:id])
-		byebug
 		@answer = 
 			if @question.answer != nil
 				@question.answer

@@ -12,9 +12,16 @@
 	<p> Posted by <%= @question.user.name %> </p>
 <% end %>
 
-<% if current_user.mentor? %>
+<% if @answer.id != nil %>
+	<p> Answer: </p>
+
+	<p><%= @answer.content %></p>
+	<p><%= @answer.user.name %></p>
+<% end %>
+
+<% if current_user.mentor? && @answer.id == nil %>
 	<%= form_for @answer do |form| %>
-		 <%= hidden_field_tag 'question_id', @question.id %>
+		<%= hidden_field_tag 'question_id', @question.id %>
 		<%= render partial: '/answers/form', object: form %>
 		<%= form.submit 'Answer' %>
 	<% end %>
